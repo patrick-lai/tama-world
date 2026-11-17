@@ -1,0 +1,16 @@
+{
+  "stage": "neutral-head",
+  "character": "sora",
+  "removedBodyTriangles": 14321,
+  "bodyTriangles": 18021,
+  "sourceHeadTriangles": 14068,
+  "totalTriangles": 32089,
+  "bytes": 2146608,
+  "sha256": "87bb686ef1d6232806a437c3084305b4ba407faaaf617976a47264ef10126b10",
+  "skins": 1,
+  "clips": [
+    "walk"
+  ],
+  "facialMorphTargets": 0,
+  "headTextureSize": 2048
+}

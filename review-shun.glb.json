@@ -1,0 +1,16 @@
+{
+  "stage": "neutral-head",
+  "character": "shun",
+  "removedBodyTriangles": 3193,
+  "bodyTriangles": 15631,
+  "sourceHeadTriangles": 14341,
+  "totalTriangles": 29972,
+  "bytes": 1669236,
+  "sha256": "04cca08a75554a4c8596651862ae9f4893d0a4677b1863b0b4a646fb56704be8",
+  "skins": 1,
+  "clips": [
+    "walk"
+  ],
+  "facialMorphTargets": 0,
+  "headTextureSize": 2048
+}

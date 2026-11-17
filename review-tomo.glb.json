@@ -1,0 +1,16 @@
+{
+  "stage": "neutral-head",
+  "character": "tomo",
+  "removedBodyTriangles": 46305,
+  "bodyTriangles": 15841,
+  "sourceHeadTriangles": 14824,
+  "totalTriangles": 30665,
+  "bytes": 1605788,
+  "sha256": "22efc80a1b5c1dd201ae67f99e13a74a54f65e42914815439f82724af72e2781",
+  "skins": 1,
+  "clips": [
+    "walk"
+  ],
+  "facialMorphTargets": 0,
+  "headTextureSize": 2048
+}

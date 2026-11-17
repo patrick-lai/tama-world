@@ -1,0 +1,16 @@
+{
+  "stage": "neutral-head",
+  "character": "ren",
+  "removedBodyTriangles": 18144,
+  "bodyTriangles": 17681,
+  "sourceHeadTriangles": 15045,
+  "totalTriangles": 32726,
+  "bytes": 1936172,
+  "sha256": "7cb2949cbbb0e339e50571f398644933be374ae0f7c2af4658eaa281270a02e2",
+  "skins": 1,
+  "clips": [
+    "walk.001"
+  ],
+  "facialMorphTargets": 0,
+  "headTextureSize": 2048
+}

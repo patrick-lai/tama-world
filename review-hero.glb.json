@@ -1,0 +1,17 @@
+{
+  "stage": "expression-pilot",
+  "character": "hero-male",
+  "removedBodyTriangles": 18865,
+  "bodyTriangles": 16119,
+  "sourceHeadTriangles": 10507,
+  "totalTriangles": 25039,
+  "bytes": 3700084,
+  "sha256": "5ace41058415b8d80763b3b9c98ca898bda7ad2526d15e24834d85f5903498ae",
+  "skins": 2,
+  "clips": [
+    "walk",
+    "idle"
+  ],
+  "facialMorphTargets": 39,
+  "headTextureSize": 2048
+}

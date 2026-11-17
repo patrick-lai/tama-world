@@ -1,0 +1,11 @@
+{
+  "sourceSha256": "9d5541c35138035b3e8fca7a039b63fc424ff137946fe5a378863c4948628ab6",
+  "sha256": "4f3215b693c6c311eda071f76114a5cf9a33e1087dafd983dec10ce64e2b9e25",
+  "bytes": 2449224,
+  "triangles": 36106,
+  "morphPrimitives": 5,
+  "eyes": [
+    "mixamorig:LeftEye",
+    "mixamorig:RightEye"
+  ]
+}

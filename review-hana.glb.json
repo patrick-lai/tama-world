@@ -1,0 +1,16 @@
+{
+  "stage": "neutral-head",
+  "character": "hana",
+  "removedBodyTriangles": 6478,
+  "bodyTriangles": 11914,
+  "sourceHeadTriangles": 14869,
+  "totalTriangles": 26783,
+  "bytes": 1603272,
+  "sha256": "939212cb72b834e40da2f3e8caf21199b9b2acbf03d9836508fc235ad1ea7703",
+  "skins": 1,
+  "clips": [
+    "walk.001"
+  ],
+  "facialMorphTargets": 0,
+  "headTextureSize": 2048
+}

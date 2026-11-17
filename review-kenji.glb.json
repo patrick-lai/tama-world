@@ -1,0 +1,16 @@
+{
+  "stage": "neutral-head",
+  "character": "kenji",
+  "removedBodyTriangles": 3455,
+  "bodyTriangles": 16245,
+  "sourceHeadTriangles": 14331,
+  "totalTriangles": 30576,
+  "bytes": 1914452,
+  "sha256": "93b58c226b4a3fdb52baf02c357d2ccaaaedec3a7e7b4692385bddd51a4fde60",
+  "skins": 1,
+  "clips": [
+    "walk"
+  ],
+  "facialMorphTargets": 0,
+  "headTextureSize": 2048
+}

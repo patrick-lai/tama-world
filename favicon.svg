@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-350 -396 700 700">
+  <style>
+    .ink { fill: #1c1d20; stroke: #1c1d20; }
+    .ring { stroke: #1c1d20; }
+    .accent { fill: #5b52d6; stroke: #5b52d6; }
+    @media (prefers-color-scheme: dark) {
+      .ink { fill: #ece8df; stroke: #ece8df; }
+      .ring { stroke: #ece8df; }
+      .accent { fill: #9f98f6; stroke: #9f98f6; }
+    }
+  </style>
+  <defs>
+    <mask id="under" maskUnits="userSpaceOnUse" x="-350" y="-396" width="700" height="700">
+      <rect x="-350" y="-396" width="700" height="700" fill="white"/>
+      <path d="M0 -380 Q28 -28 200 0 Q28 28 0 200 Q-28 28 -200 0 Q-28 -28 0 -380 Z" fill="black" stroke="black" stroke-width="46" stroke-linejoin="round"/>
+    </mask>
+  </defs>
+  <circle class="ring" r="270" fill="none" stroke-width="34" mask="url(#under)"/>
+  <path class="ink" d="M0 -380 Q28 -28 200 0 Q28 28 0 200 Q-28 28 -200 0 Q-28 -28 0 -380 Z" stroke-width="10" stroke-linejoin="round"/>
+  <path class="accent" d="M0 -380 L44 -220 L-44 -220 Z" stroke-width="10" stroke-linejoin="round"/>
+</svg>

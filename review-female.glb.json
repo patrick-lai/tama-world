@@ -1,0 +1,17 @@
+{
+  "stage": "expression-pilot",
+  "character": "hero-female",
+  "removedBodyTriangles": 6051,
+  "bodyTriangles": 17177,
+  "sourceHeadTriangles": 14339,
+  "totalTriangles": 30218,
+  "bytes": 3927192,
+  "sha256": "69ec5b3afdb24f2120c331a26c6dd223a4c1e6449698a66e3cb1d796aaf3f573",
+  "skins": 2,
+  "clips": [
+    "walk",
+    "idle"
+  ],
+  "facialMorphTargets": 41,
+  "headTextureSize": 2048
+}

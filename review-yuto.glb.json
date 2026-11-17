@@ -1,0 +1,16 @@
+{
+  "stage": "neutral-head",
+  "character": "yuto",
+  "removedBodyTriangles": 15186,
+  "bodyTriangles": 16996,
+  "sourceHeadTriangles": 14166,
+  "totalTriangles": 31162,
+  "bytes": 1665708,
+  "sha256": "fb030d78be93249d1b404c4349d45e0a9317543e344206f9df7a119e01cef99c",
+  "skins": 1,
+  "clips": [
+    "walk.001"
+  ],
+  "facialMorphTargets": 0,
+  "headTextureSize": 2048
+}

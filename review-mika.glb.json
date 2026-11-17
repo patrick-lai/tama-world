@@ -1,0 +1,16 @@
+{
+  "stage": "neutral-head",
+  "character": "mika",
+  "removedBodyTriangles": 4502,
+  "bodyTriangles": 15352,
+  "sourceHeadTriangles": 14778,
+  "totalTriangles": 30130,
+  "bytes": 1599304,
+  "sha256": "16e2502f49b024f582b6bc84d2930f90d40cef94f7f9d9d221d21deaa41841a0",
+  "skins": 1,
+  "clips": [
+    "walk.001"
+  ],
+  "facialMorphTargets": 0,
+  "headTextureSize": 2048
+}
