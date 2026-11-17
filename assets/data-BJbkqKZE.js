@@ -1,0 +1,1 @@
+import{z as s}from"./index-h1dckpvL.js";import{b as u,c as t,d as n}from"./useWorkshopScene-DD7MX1pS.js";import"./RailHeader-As8Vsq3J.js";function i(){return u()}function l(){const r=t(),a=n();return s(e=>e.ui.page!==null||e.ui.surface==="team")?{workspaceId:null,threadId:null}:{workspaceId:r,threadId:a}}export{l as a,i as u};

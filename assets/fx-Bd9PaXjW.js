@@ -1,0 +1,108 @@
+import{M as H,Q as rt,U as V,T as ft,ah as lt,X as G,bb as x,V as m,H as A,a4 as B,a3 as U,bc as ht,ai as j,bd as ut,S as tt,af as E,ap as F,be as D,bf as ct,aI as et,am as R,bg as Y,bh as nt,bi as Z,aB as dt,$ as gt}from"./index-h1dckpvL.js";import{r as it}from"./paint-DvB8_aA8.js";const P={morning:{sun:"#fff0d8",sunIntensity:8.2,elevation:40,swing:26,sky:"#e6ecf0",ground:"#9a8468",hemi:1.06,fill:"#f6ecde",fillIntensity:.54,bounce:2.8,ambient:.16,env:.3,exposure:1.12,lamps:0,shaft:.56,dust:.35,grade:{contrast:1.08,saturation:1.02,lift:.01,vignette:.42,bloom:.22,threshold:2.8},tone:{top:"#9cc4ea",horizon:"#f3e2cf",sun:"#fff1d6",night:!1,sunHeight:.35}},noon:{sun:"#ffecca",sunIntensity:9,elevation:42,swing:30,sky:"#dfe8f2",ground:"#9a8a72",hemi:.86,fill:"#e6eef8",fillIntensity:.46,bounce:2.4,ambient:.14,env:.3,exposure:1.12,lamps:0,shaft:.64,dust:.3,grade:{contrast:1.1,saturation:1.03,lift:.008,vignette:.42,bloom:.2,threshold:3},tone:{top:"#7fb3e6",horizon:"#e2eef7",sun:"#fffaf0",night:!1,sunHeight:.9}},golden:{sun:"#ffe6b0",sunIntensity:10,elevation:38,swing:28,sky:"#f0e6da",ground:"#8d7660",hemi:1.02,fill:"#fbe6d0",fillIntensity:.54,bounce:3.2,ambient:.16,env:.3,exposure:1.16,lamps:.6,shaft:.7,dust:.35,grade:{contrast:1.08,saturation:1.05,lift:.012,vignette:.43,bloom:.24,threshold:2.6},tone:{top:"#a9c8e4",horizon:"#ffd9a6",sun:"#ffe0a8",night:!1,sunHeight:.22}},dusk:{sun:"#ffb08a",sunIntensity:6,elevation:30,swing:32,sky:"#c2aec8",ground:"#5c4a52",hemi:.64,fill:"#e8c6c0",fillIntensity:.36,bounce:2,ambient:.14,env:.2,exposure:1.06,lamps:2.8,shaft:.7,dust:.2,grade:{contrast:1.07,saturation:1.06,lift:.014,vignette:.45,bloom:.33,threshold:1.2},tone:{top:"#5a5f9a",horizon:"#f5a37f",sun:"#ffb489",night:!1,sunHeight:.04}},night:{sun:"#a9bcf2",sunIntensity:1.1,elevation:45,swing:22,sky:"#6a76a4",ground:"#3a3444",hemi:.42,fill:"#a4b0d8",fillIntensity:.24,bounce:.8,ambient:.08,env:.08,exposure:1.04,lamps:4.6,shaft:.24,dust:.05,grade:{contrast:1.05,saturation:1.06,lift:.02,vignette:.44,bloom:.38,threshold:.9},tone:{top:"#0d1433",horizon:"#27305a",sun:"#dfe6ff",night:!0,sunHeight:.6}}},mt={morning:{sun:"#ffe9c4",sunIntensity:6.2,sky:"#c4d4e6",hemi:.88,fillIntensity:.28,bounce:.9,ambient:.09,env:.2,exposure:.98,dust:.08,grade:{contrast:1.1,saturation:.92,lift:.004,vignette:.44,bloom:.24,threshold:2.8}},noon:{sun:"#fff1d8",sunIntensity:6,swing:30,sky:"#bed3ea",hemi:.86,fillIntensity:.26,bounce:.8,ambient:.08,env:.18,exposure:.95,dust:.06,grade:{contrast:1.1,saturation:.9,lift:.003,vignette:.45,bloom:.22,threshold:3}},golden:{sun:"#ffd394",sunIntensity:7.6,sky:"#cdc6d2",hemi:.8,fillIntensity:.28,bounce:1,ambient:.09,env:.18,exposure:1,dust:.1,grade:{contrast:1.1,saturation:.98,lift:.006,vignette:.45,bloom:.26,threshold:2.4}},dusk:{sun:"#ffcdb8",sunIntensity:4,sky:"#8a9ed6",hemi:.96,fill:"#c0c8ec",fillIntensity:.34,bounce:.8,ambient:.13,env:.16,exposure:1.06,dust:.12,grade:{contrast:1.08,saturation:.98,lift:.012,vignette:.46,bloom:.34,threshold:1.4}},night:{sunIntensity:1.2,sky:"#56679c",hemi:.6,fillIntensity:.24,bounce:.5,ambient:.11,env:.1,exposure:1.04,dust:.05}},pt={underwater:{sun:"#8fe3ea",fill:"#a6dce2",sky:"#7fc4d2",strength:.62},space:{sun:"#e4ebff",fill:"#c8d2f0",sky:"#8e9cc8",strength:.35}},vt={morning:0,noon:0,golden:.06,dusk:.2,night:.34},q=.95,wt=.4,yt=.8,st=4,bt=5,Mt=.64,X=2.6,xt=30,St=.9,zt=1.8,At=.35,K=.3,$=.6;function It(i,t){return Math.min(zt,Math.max(i,St))*t*xt}function Tt(i,t,e){let n=null,s=1/0;for(const a of i){const o=(a[0]-t)**2+(a[2]-e)**2;o<s&&(s=o,n=a)}return n}function Q(i,t){return t?[Math.max(i[0],q),i[1],Math.max(i[2],q)]:i}function _t(i,t){return t&&Math.min(i[0],i[2])<wt?yt:1}function Ft(i){return st+bt*Math.min(1,Math.max(0,Number.isFinite(i)?i:0))}function kt(i,t){const e=t?t.height*x:X;return Mt*i.shaft*Math.min(1,Math.max(.55,X/Math.max(.1,e)))}function Et(i){return A(i.sun,"#ffffff",i.tone.night?.5:.12)}const Pt=4;function Lt(i,t=Pt){if(i.length<=t)return[...i];const e=i.reduce((r,h)=>r+h[0],0)/i.length,n=i.reduce((r,h)=>r+h[2],0)/i.length,s=(r,h,l)=>(r[0]-h)**2+(r[2]-l)**2;let a=0;i.forEach((r,h)=>{const l=i[a];l&&s(r,e,n)<s(l,e,n)&&(a=h)});const o=[a];for(;o.length<t;){let r=-1,h=-1;if(i.forEach((l,f)=>{if(o.includes(f))return;const g=Math.min(...o.map(c=>{const u=i[c];return u?s(l,u[0],u[2]):1/0}));g>h&&(h=g,r=f)}),r<0)break;o.push(r)}return o.sort((r,h)=>r-h).flatMap(r=>{const h=i[r];return h?[h]:[]})}function Qt(i){const t=ut(i),e=Math.min(1,Math.max(0,(t-.6)/.3));return 1-.16*e*e*(3-2*e)}function Ct(i,t,e="none"){const n=P[i]??P.golden,s=t?mt[i]??{}:{},a={...n,...s,grade:{...n.grade,...s.grade}},o=pt[e];return o?{...a,sun:A(a.sun,o.sun,o.strength),fill:A(a.fill,o.fill,o.strength),sky:A(a.sky,o.sky,o.strength)}:a}function Ot(i){const t=i.openings.filter(e=>!e.door);return t.length===0?null:[...t].sort((e,n)=>n.width*n.height-e.width*e.height||(e.wall==="back"?-1:1))[0]??null}function J(i,t){const e=typeof t=="string"?P[t]??P.golden:t,n=Ot(i),s=e.elevation*Math.PI/180,a=e.swing*Math.PI/180,o=[i.width/2,0,i.depth/2];if(!n||i.wall_height<16)return{opening:null,direction:[Math.cos(s)*Math.sin(.45),-Math.sin(s),Math.cos(s)*Math.cos(.45)],windowCenter:[o[0],i.wall_height*x,0],patch:o};const r=n.from+n.width/2,h=(n.sill+n.height/2)*x,l=n.wall==="back",f=l?[r,h,0]:[0,h,r],g=l?Math.sign(o[0]-r)||-1:Math.sign(o[2]-r)||1,c=Math.cos(s)*Math.cos(a),u=Math.cos(s)*Math.sin(a)*g,v=l?[u,-Math.sin(s),c]:[c,-Math.sin(s),u],p=h/Math.max(.05,Math.sin(s)),b=[f[0]+v[0]*p,0,f[2]+v[2]*p];return{opening:n,direction:v,windowCenter:f,patch:b}}class Jt{sun=new H("#ffffff",3);hemi=new rt("#ffffff","#806650",1);fill=new H("#ffffff",.6);bounce=new V("#ffffff",3,9,1.4);ambient=new ft("#ffffff",.2);lamps=[];pool=new lt("#ffd9a0",0,7,1,1,1.5);poolTarget=new G;target=new G;indoor=!0;plan=null;day=P.golden;constructor(t){this.sun.castShadow=!0,this.sun.shadow.bias=-4e-4,this.sun.shadow.normalBias=.025,this.sun.shadow.radius=st,this.sun.target=this.target,this.fill.castShadow=!1,this.bounce.castShadow=!1,t.add(this.sun,this.target,this.hemi,this.fill,this.bounce,this.ambient);for(let e=0;e<4;e+=1){const n=new V("#ffd9a0",0,5,1.6);n.castShadow=!1,this.lamps.push(n),t.add(n)}this.pool.castShadow=!1,this.pool.target=this.poolTarget,t.add(this.pool,this.poolTarget)}setShadowSize(t){this.sun.shadow.mapSize.x!==t&&(this.sun.shadow.mapSize.set(t,t),this.sun.shadow.map?.dispose(),this.sun.shadow.map=null)}apply(t,e,n,s,a,o="none"){const r=J(t,e).opening!==null;this.applyDay(t,Ct(e,!r,o),vt[e]??0,n,s,a)}applyDay(t,e,n,s,a,o,r=1,h=0){const l=J(t,e),f=l.opening!==null,g=n*Math.min(1,a.length/4);this.day=e,this.plan=l;const c=t.wall_height*x,u=new m(t.width/2,c*.3,t.depth/2),v=new m(...e.aim??l.direction).normalize();this.target.position.copy(u),this.sun.position.copy(u).addScaledVector(v,-40),this.sun.color.set(e.sun),this.sun.intensity=e.sunIntensity,this.sun.shadow.radius=Ft(h),this.hemi.color.set(A(e.sky,o,Math.min(.45,g))),this.hemi.groundColor.set(A(e.ground,s,f?.35:.55)),this.hemi.intensity=e.hemi+g,this.fill.color.set(e.fill),this.fill.intensity=e.fillIntensity,this.fill.position.set(u.x+12,u.y+14,u.z+16),this.fill.target=this.target,this.ambient.intensity=e.ambient+g*.12,this.ambient.color.set(e.sky),this.bounce.color.set(A(e.sun,s,.45)),this.bounce.intensity=e.bounce,this.bounce.distance=Math.max(t.width,t.depth)*.9,this.bounce.position.set(Math.min(t.width-.5,Math.max(.5,l.patch[0])),-.3,Math.min(t.depth-.5,Math.max(.5,l.patch[2])));const p=t.wall_height>=16,b=Lt(a,this.lamps.length);this.lamps.forEach((y,d)=>{const z=b[d];y.intensity=z?e.lamps*r*_t(z,p):0,y.color.set(o),z&&y.position.set(...Q(z,p))});const M=Tt(b,u.x,u.z),S=B()&&e.tone.night?1:0;if(this.pool.intensity=M&&p?It(e.lamps,r)*(1+(U.cozy.poolNight-1)*S):0,this.pool.color.set(S?A(o,"#ffb45a",U.cozy.poolWarm):o),this.pool.castShadow=!1,M){const[y,,d]=Q(M,p);this.pool.position.set(y+(u.x-y)*K,c-At,d+(u.z-d)*K),this.poolTarget.position.set(y+(u.x-y)*$,0,d+(u.z-d)*$)}B()&&ht(this,p,this.indoor,e.key),this.fitShadow(t)}fitShadow(t){const e=t.wall_height*x,n=[];for(const u of[-.6,t.width+.2])for(const v of[-.6,e+.4])for(const p of[-.6,t.depth+.2])n.push(new m(u,v,p));const s=new j().lookAt(this.sun.position,this.target.position,new m(0,1,0)),a=new j().makeTranslation(this.sun.position.x,this.sun.position.y,this.sun.position.z).multiply(s).invert();let[o,r,h,l,f,g]=[1/0,1/0,1/0,-1/0,-1/0,-1/0];for(const u of n)u.applyMatrix4(a),o=Math.min(o,u.x),l=Math.max(l,u.x),r=Math.min(r,u.y),f=Math.max(f,u.y),h=Math.min(h,u.z),g=Math.max(g,u.z);const c=this.sun.shadow.camera;c.left=o-.2,c.right=l+.2,c.top=f+.2,c.bottom=r-.2,c.near=Math.max(.1,-g-1),c.far=-h+1,c.updateProjectionMatrix()}dispose(){for(const t of[this.sun,this.hemi,this.fill,this.bounce,this.ambient,this.pool,...this.lamps])t.removeFromParent(),t.dispose();this.target.removeFromParent(),this.poolTarget.removeFromParent()}}const te={width:960,height:400};function Dt(i,t="#e9e2d4"){const e=new E(t);if(typeof document>"u"||!i)return e;const n=document.createElement("canvas");n.width=n.height=1;const s=n.getContext("2d",{willReadFrequently:!0});if(!s)return e;s.fillStyle=t,s.fillStyle=i,s.fillRect(0,0,1,1);const[a=0,o=0,r=0]=s.getImageData(0,0,1,1).data;return e.setRGB(a/255,o/255,r/255,tt)}function ee(i,t="#e9e2d4"){return`#${Dt(i,t).getHexString(tt)}`}function ne(i){const t=new Map(i.map(e=>[e,e.visible]));for(const e of t.keys())e.visible=!1;return()=>{for(const[e,n]of t)e.visible=n}}function ie(i,t,e){const[n,s]=Nt(t,e);let a=null;const o=i.hide();try{i.size(n,s),i.canonical(n/s,()=>{i.draw(),a=Rt(i.renderer,n,s)})}finally{o(),i.restore()}return a}function Rt(i,t,e){if(typeof document>"u")return null;const n=document.createElement("canvas");n.width=t,n.height=e;const s=n.getContext("2d");return s?(s.drawImage(i.domElement,0,0,t,e),n):null}function se(i){return i?new Promise(t=>{try{i.toBlob(e=>t(e),"image/png")}catch{t(null)}}):Promise.resolve(null)}function Nt(i,t,e=2048){const n=Math.max(16,Math.round(Number.isFinite(i)?i:512)),s=Math.max(16,Math.round(Number.isFinite(t)?t:512)),a=Math.min(1,e/Math.max(n,s));return[Math.max(16,Math.round(n*a)),Math.max(16,Math.round(s*a))]}const Wt=.7,Ht=`
+varying vec2 vShaft;
+varying float vY;
+varying float vViewZ;
+attribute vec2 shaft;
+void main() {
+  vShaft = shaft;
+  vec4 world = modelMatrix * vec4(position, 1.0);
+  vY = world.y;
+  vec4 view = viewMatrix * world;
+  vViewZ = view.z;
+  gl_Position = projectionMatrix * view;
+}`,Vt=`
+#include <packing>
+uniform vec3 uColor;
+uniform float uStrength;
+uniform float uTime;
+uniform sampler2D uDepth;
+uniform float uSoft;
+uniform float uNear;
+uniform float uFar;
+varying vec2 vShaft;
+varying float vY;
+varying float vViewZ;
+float hash(float n) { return fract(sin(n) * 43758.5453); }
+float noise(float x) { float i = floor(x); float f = fract(x); return mix(hash(i), hash(i + 1.0), f * f * (3.0 - 2.0 * f)); }
+void main() {
+  if (vY < 0.0) discard;
+  float across = sin(3.14159265 * clamp(vShaft.x, 0.0, 1.0));
+  across *= across;
+  float along = pow(1.0 - clamp(vShaft.y, 0.0, 1.0), 1.4) * smoothstep(0.0, 0.12, vShaft.y);
+  float shimmer = 0.78 + 0.22 * noise(vShaft.x * 9.0 + uTime * 0.35) * noise(vShaft.x * 3.0 - uTime * 0.2 + 7.0);
+  float floorFade = smoothstep(0.0, 0.5, vY);
+  float a = across * along * shimmer * floorFade * uStrength;
+  if (uSoft > 0.0) {
+    float depth = texture2D(uDepth, gl_FragCoord.xy / vec2(textureSize(uDepth, 0))).x;
+    float sceneZ = orthographicDepthToViewZ(depth, uNear, uFar);
+    a *= smoothstep(0.0, uSoft, vViewZ - sceneZ);
+  }
+  gl_FragColor = vec4(uColor * a, a);
+}`,Gt=`
+attribute vec4 seed;
+uniform float uTime;
+uniform vec3 uDir;
+uniform vec4 uWindow;
+uniform float uAxis;
+uniform float uSize;
+uniform float uOpen;
+uniform float uAmbient;
+uniform float uAmount;
+uniform vec3 uMin;
+uniform vec3 uMax;
+varying float vGlow;
+void main() {
+  vec3 p = position;
+  float t = uTime * (0.2 + seed.w * 0.25);
+  p += vec3(sin(t + seed.x * 6.28) * 0.35, sin(t * 0.7 + seed.y * 6.28) * 0.25 + fract(uTime * 0.012 * (0.5 + seed.z)) * 0.6, cos(t * 0.9 + seed.z * 6.28) * 0.35);
+  p = uMin + mod(p - uMin, uMax - uMin);
+  float lit = 0.0;
+  if (uOpen > 0.5) {
+    float s = uAxis < 0.5 ? p.z / max(uDir.z, 1e-3) : p.x / max(uDir.x, 1e-3);
+    vec3 q = p - uDir * s;
+    float along = uAxis < 0.5 ? q.x : q.z;
+    float inside = smoothstep(uWindow.x - 0.15, uWindow.x + 0.35, along) * smoothstep(uWindow.y + 0.15, uWindow.y - 0.35, along) * smoothstep(uWindow.z - 0.15, uWindow.z + 0.3, q.y) * smoothstep(uWindow.w + 0.15, uWindow.w - 0.3, q.y);
+    lit = inside * step(0.0, s);
+  } else lit = uAmbient;
+  vGlow = (uOpen > 0.5 ? uAmount : 1.0) * (0.025 + lit * (0.55 + 0.45 * seed.w));
+  vec4 view = modelViewMatrix * vec4(p, 1.0);
+  gl_Position = projectionMatrix * view;
+  gl_PointSize = uSize * (0.5 + seed.x * 0.7) * (0.6 + lit * 0.6);
+}`,Bt=`
+uniform vec3 uColor;
+varying float vGlow;
+void main() {
+  vec2 d = gl_PointCoord - 0.5;
+  float r = dot(d, d) * 4.0;
+  if (r > 1.0) discard;
+  float a = (1.0 - r) * (1.0 - r) * vGlow;
+  gl_FragColor = vec4(uColor * a, a);
+}`,Ut=`
+attribute float size;
+attribute vec4 tint;
+attribute float edge;
+uniform float uScale;
+varying vec4 vTint;
+varying float vEdge;
+varying float vSize;
+void main() {
+  vTint = tint;
+  vEdge = edge;
+  gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+  gl_PointSize = size * uScale;
+  vSize = gl_PointSize;
+}`,jt=`
+varying vec4 vTint;
+varying float vEdge;
+varying float vSize;
+void main() {
+  vec2 d = gl_PointCoord - 0.5;
+  float r = dot(d, d) * 4.0;
+  if (r > 1.0 || vTint.a <= 0.0) discard;
+  if (vEdge > 0.5) {
+    float rim = length(d) * vSize > vSize * 0.5 - 1.25 ? 1.0 : 0.0;
+    gl_FragColor = vec4(mix(vTint.rgb, vTint.rgb * 0.3, rim), vTint.a);
+    return;
+  }
+  gl_FragColor = vec4(vTint.rgb, vTint.a * (1.0 - r * r));
+}`;function oe(i,t){const e=i.opening;if(!e)return null;const n=new m(...i.direction).normalize(),s=e.sill*x,a=Math.min(t.wall_height*x-.15,(e.sill+e.height)*x),o=e.from,r=e.from+e.width,h=e.wall==="back",l=(w,I)=>h?new m(w,I,0):new m(0,I,w),f=[l(o,s),l(r,s),l(r,a),l(o,a)],g=(a+.2)/Math.max(.08,-n.y),c=w=>w.clone().addScaledVector(n,g),u=[c(f[0]),c(f[1]),c(f[2]),c(f[3])],v=[],p=[],b=[],M=[[0,1,0,1],[1,2,0,1],[2,3,1,0],[3,0,1,0]];for(const[w,I,T,W]of M){const _=v.length/3;for(const[C,ot,at]of[[f[w],T,0],[f[I],W,0],[u[I],W,1],[u[w],T,1]])v.push(C.x,C.y,C.z),p.push(ot,at);b.push(_,_+1,_+2,_,_+2,_+3)}const S=l((o+r)/2,s),y=l((o+r)/2,a),d=v.length/3;for(const[w,I,T]of[[S,.5,0],[y,.5,0],[c(y),.5,1],[c(S),.5,1]])v.push(w.x,w.y,w.z),p.push(I,T);for(const[w,I,T]of[[f[0].clone().lerp(f[3],.5),0,0],[f[1].clone().lerp(f[2],.5),1,0],[u[1].clone().lerp(u[2],.5),1,1],[u[0].clone().lerp(u[3],.5),0,1]])v.push(w.x,w.y,w.z),p.push(I,T);b.push(d,d+1,d+2,d,d+2,d+3,d+4,d+5,d+6,d+4,d+6,d+7);const z=new R;z.setAttribute("position",new Z(v,3)),z.setAttribute("shaft",new Z(p,2)),z.setIndex(b);const N={uColor:{value:new E},uStrength:{value:.1},uTime:{value:0},uDepth:{value:null},uSoft:{value:0},uNear:{value:.1},uFar:{value:100}},L=new D({vertexShader:Ht,fragmentShader:Vt,uniforms:N,transparent:!0,depthWrite:!1,blending:nt,side:dt}),k=new gt(z,L);return k.renderOrder=5,k.frustumCulled=!1,k.castShadow=!1,k.receiveShadow=!1,{mesh:k,material:L,uniforms:N,dispose(){z.dispose(),L.dispose()}}}function ae(i,t,e){if(!i)return;const n=i.uniforms;n.uDepth.value=t,n.uSoft.value=t?Wt:0,n.uNear.value=e.near,n.uFar.value=e.far}function re(i,t,e,n){if(i&&(i.uniforms.uColor.value.set(Et(e)),i.uniforms.uStrength.value=kt(e,n)),t){const s=t.uniforms;s.uColor.value.set(qt(e)),s.uAmbient.value=e.dust,s.uAmount.value=Zt(e)}}const Yt=.3;function Zt(i){return Math.min(1.2,Math.max(0,(Number.isFinite(i.dust)?i.dust:0)/Yt))}function qt(i){return A(A(i.sun,"#ffffff",.35),"#ffd9a0",i.tone.night?.55:0)}function fe(i,t,e,n){const s=it(n),a=Math.max(1.5,t.wall_height*x),o=new m(.2,.15,.2),r=new m(t.width-.2,a-.2,t.depth-.2),h=new Float32Array(e*3),l=new Float32Array(e*4),f=i.opening,g=new m(...i.direction).normalize();for(let M=0;M<e;M+=1){let S=new m(o.x+s()*(r.x-o.x),o.y+s()*(r.y-o.y),o.z+s()*(r.z-o.z));if(f&&M%2===0){const y=f.from+s()*f.width,d=(f.sill+s()*f.height)*x;S=(f.wall==="back"?new m(y,d,0):new m(0,d,y)).addScaledVector(g,s()*(d/Math.max(.1,-g.y))),S.clamp(o,r)}h.set([S.x,S.y,S.z],M*3),l.set([s(),s(),s(),s()],M*4)}const c=new R;c.setAttribute("position",new F(h,3)),c.setAttribute("seed",new F(l,4));const u=f?new Y(f.from,f.from+f.width,f.sill*x,(f.sill+f.height)*x):new Y,v={uTime:{value:0},uDir:{value:g},uWindow:{value:u},uAxis:{value:f?.wall==="left"?1:0},uSize:{value:3},uOpen:{value:f?1:0},uAmbient:{value:.35},uAmount:{value:1},uColor:{value:new E("#fff1d6")},uMin:{value:o},uMax:{value:r}},p=new D({vertexShader:Gt,fragmentShader:Bt,uniforms:v,transparent:!0,depthWrite:!1,blending:nt}),b=new et(c,p);return b.frustumCulled=!1,b.renderOrder=6,{points:b,material:p,uniforms:v,dispose(){c.dispose(),p.dispose()}}}const Xt=["#ff8fa3","#ffd36b","#9ff0a8","#8fd0ff","#c9a2ff","#ffffff"],O={trail:{count:3,speed:[.04,.14],rise:[.05,.2],life:[.5,.35],size:[2.2,1.8],gravity:-.12,sphere:!1,palette:["#fff4c2","#ffe08a","#d9c8ff","#ffffff"]},glint:{count:6,speed:[.1,.2],rise:[.22,.35],life:[.75,.45],size:[2.8,2.4],gravity:-.1,sphere:!1,palette:["#fff4c2","#ffd66b","#ffffff"]},prism:{count:8,speed:[.12,.22],rise:[.25,.35],life:[.8,.5],size:[3,2.6],gravity:-.1,sphere:!1,palette:Xt},firework:{count:42,speed:[2.1,.9],rise:[0,0],life:[1.5,.7],size:[4.2,3],gravity:1.1,sphere:!0,palette:["#ffd36b","#fff1c2","#ff9f5a"]},arrive:{count:7,speed:[.3,.2],rise:[.5,.3],life:[.32,.06],size:[10,3],gravity:-.2,sphere:!1,palette:["#ffe27a","#ffd34d","#fff0a0"],edge:!0},welcome:{count:7,speed:[.55,.25],rise:[.5,.3],life:[.5,.12],size:[9,4],gravity:-.1,sphere:!1,palette:["#ffe27a","#ffd34d","#fff0a0"],edge:!0}},le=[["#ff6b8a","#ffd1dc","#ffffff"],["#6bd8ff","#c9f1ff","#ffffff"],["#ffd36b","#fff1c2","#ff9f5a"],["#9ff0a8","#e1ffe4","#6bd8ff"],["#c9a2ff","#f0e2ff","#ff8fe0"]];class he{constructor(t=640){this.capacity=t,this.positions=new Float32Array(t*3),this.sizes=new Float32Array(t),this.tints=new Float32Array(t*4),this.edges=new Float32Array(t),this.geometry.setAttribute("position",new F(this.positions,3)),this.geometry.setAttribute("size",new F(this.sizes,1)),this.geometry.setAttribute("tint",new F(this.tints,4)),this.geometry.setAttribute("edge",new F(this.edges,1)),this.geometry.setDrawRange(0,0),this.material=new D({vertexShader:Ut,fragmentShader:jt,uniforms:{uScale:this.scale},transparent:!0,depthWrite:!1,blending:ct}),this.points=new et(this.geometry,this.material),this.points.frustumCulled=!1,this.points.renderOrder=7}capacity;points;material;geometry=new R;scale={value:1};positions;sizes;tints;edges;particles=[];rand=it(24301);get active(){return this.particles.length>0}setScale(t){this.scale.value=t}emit(t,e,n,s=1){const a=new m(...t.at),o=t.kind,r=Math.round((o==="puff"?9:o==="sparkle"?12:30)*s);for(let h=0;h<r&&this.particles.length<this.capacity;h+=1){const l=this.rand()*Math.PI*2,f=o==="puff"?.4+this.rand()*.5:o==="sparkle"?.3+this.rand()*.5:1.2+this.rand()*1.6,g=o==="celebrate"?["#f4d58d","#f08a7e","#9fd8c8","#b9a4f0",n]:o==="sparkle"?["#fff4c2","#ffe08a","#ffffff"]:[e];this.particles.push({life:o==="puff"?.7+this.rand()*.3:o==="sparkle"?.9+this.rand()*.5:1.4+this.rand()*.6,age:0,position:a.clone().add(new m(Math.cos(l)*.1,o==="puff"?.05:.2+this.rand()*.3,Math.sin(l)*.1)),velocity:new m(Math.cos(l)*f,o==="puff"?.25+this.rand()*.3:o==="sparkle"?.6+this.rand()*.6:2.2+this.rand()*1.5,Math.sin(l)*f),size:(o==="puff"?5+this.rand()*4:o==="sparkle"?3.5+this.rand()*3:4+this.rand()*3)*(s>1?1.5:1),grow:o==="puff"?1.3:.4,color:new E(g[Math.floor(this.rand()*g.length)]??e),gravity:o==="celebrate"?4:o==="puff"?-.2:-.3,edge:0})}}spray(t,e,n=O[t].palette){const s=O[t];for(let a=0;a<s.count&&this.particles.length<this.capacity;a+=1){const o=this.rand()*Math.PI*2,r=s.speed[0]+this.rand()*s.speed[1],h=s.sphere?this.rand()*2-1:0,l=Math.sqrt(1-h*h);this.launch(s,n,new m(...e),new m(Math.cos(o)*l*r,s.sphere?h*r:s.rise[0]+this.rand()*s.rise[1],Math.sin(o)*l*r))}}scatter(t,e){const n=O[t];for(const s of e.slice(0,n.count)){if(this.particles.length>=this.capacity)return;const a=n.speed[0]+this.rand()*n.speed[1],o=new m(...s.heading).multiplyScalar(a);o.y+=n.rise[0]+this.rand()*n.rise[1],this.launch(n,n.palette,new m(...s.at),o)}}launch(t,e,n,s){this.particles.push({life:t.life[0]+this.rand()*t.life[1],age:0,position:n,velocity:s,size:t.size[0]+this.rand()*t.size[1],grow:.3,color:new E(e[Math.floor(this.rand()*e.length)]??"#ffffff"),gravity:t.gravity,edge:t.edge===!0?1:0})}update(t){const e=Math.min(.1,Math.max(0,t));this.particles=this.particles.filter(n=>(n.age+=e)<n.life),this.particles.forEach((n,s)=>{n.velocity.multiplyScalar(Math.pow(.18,e)),n.velocity.y-=n.gravity*e,n.position.addScaledVector(n.velocity,e),n.position.y<.02&&(n.position.y=.02);const a=n.age/n.life;this.positions.set([n.position.x,n.position.y,n.position.z],s*3),this.sizes[s]=n.size*(1+n.grow*a);const o=n.edge>0?Math.min(1,(1-a)*3):n.grow>1?.42*(1-a)*(1-a):(1-a)*(.6+.4*Math.sin(n.age*30+s));this.tints.set([n.color.r,n.color.g,n.color.b,Math.max(0,o)],s*4),this.edges[s]=n.edge}),this.geometry.setDrawRange(0,this.particles.length);for(const n of["position","size","tint","edge"])this.geometry.getAttribute(n).needsUpdate=!0}clear(){this.particles=[],this.geometry.setDrawRange(0,0)}dispose(){this.geometry.dispose(),this.material.dispose()}}export{he as B,le as F,vt as L,O as S,Jt as a,fe as b,Dt as c,Ct as d,oe as e,Qt as f,te as g,ee as h,ae as i,ie as j,ne as k,re as l,Ot as m,se as t};
