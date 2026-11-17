@@ -1,0 +1,1 @@
+import{f as r,g as o}from"./Button-d9A2_pNQ.js";import{z as s,h as i}from"./index-gaGnR8o2.js";import"./repoTab-OJXttR8U.js";function n(t,a){const e=s.getState().entities.threads[t];e&&(i.getState().setStage(e.workspace_id,r(a)),o())}export{n as openMod};
